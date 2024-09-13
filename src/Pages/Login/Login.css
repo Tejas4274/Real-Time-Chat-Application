@@ -1,0 +1,228 @@
+.login {
+  min-height: 100vh;
+  background: url("/background.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.login .logo {
+  width: max(20vh, 200px);
+}
+
+.login-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.login-form h2 {
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-form .form-input {
+  padding: 12px 15px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.login-form .form-input:focus {
+  border-color: rgb(0, 132, 255);
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 50px;
+  color: black;
+  padding: 1em 1.8em;
+  background: #ffff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.2s background;
+}
+
+button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .arrow {
+  margin-top: 1px;
+  width: 15px;
+  background: white;
+  height: 2px;
+  position: relative;
+  transition: 0.2s;
+}
+
+button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+button:hover {
+  background-color: white;
+}
+
+button:hover .arrow {
+  background: black;
+}
+
+button:hover .arrow:before {
+  right: 0;
+}
+
+.login-term {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.login-forward {
+  text-align: center;
+}
+
+.login-toggle {
+  font-size: 16px;
+  color: black;
+}
+
+.login-toggle span {
+  color: black;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.login-toggle span:hover {
+  color: rgb(0, 157, 255);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.checkbox-wrapper-46 input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+.checkbox-wrapper-46 .cbx {
+  margin: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.checkbox-wrapper-46 .cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-46 .cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #9098a9;
+  transition: all 0.2s ease;
+}
+.checkbox-wrapper-46 .cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-46 .cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+}
+.checkbox-wrapper-46 .cbx span:last-child {
+  padding-left: 8px;
+}
+.checkbox-wrapper-46 .cbx:hover span:first-child {
+  border-color: black;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
+  background: black;
+  border-color: black;
+  animation: wave-46 0.4s ease;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(3.5);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+@keyframes wave-46 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+}
