@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
+import { getAnalytics } from "firebase/analytics";
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -16,21 +16,21 @@ import {
   setDoc,
   where,
 } from "firebase/firestore";
+
 import { toast } from "react-toastify";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBagyXEn8vSxw-ucyNFo5-hqol-s0s3yMk",
-  authDomain: "chat-application-tk.firebaseapp.com",
-  projectId: "chat-application-tk",
-  storageBucket: "chat-application-tk.appspot.com",
-  messagingSenderId: "489476906143",
-  appId: "1:489476906143:web:29161b8adb51ec465256aa",
-  measurementId: "G-ZWVBBEJ163",
+  apiKey: "AIzaSyA6wWJN8XpCe5IoD1-lnUK_OxYKoerjnNs",
+  authDomain: "chat-application-tk-6396.firebaseapp.com",
+  projectId: "chat-application-tk-6396",
+  storageBucket: "chat-application-tk-6396.appspot.com",
+  messagingSenderId: "831898928107",
+  appId: "1:831898928107:web:5acd2322e2e6d7ef7acfae"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+const analytics = getAnalytics(app);
 
 const auth = getAuth(app);
 const db = getFirestore(app);
